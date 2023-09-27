@@ -1,0 +1,645 @@
+/* Importing Google font - Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #EAF4FB;
+    /* background: url("../images/hero-bg.jpg") center/cover no-repeat; */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+}
+
+/* navbar */
+.navbar {
+    background-color: #EAF4FB;
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar .hamburger-btn {
+    display: none;
+    color: #17206D;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+.navbar .logo h2{
+    color: #17206D;
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar .links a {
+    color: #17206D;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #17206D; 
+    transition: border-bottom 0.1s ease;
+}
+
+
+.navbar .links a:hover {
+    color: #17206d75;
+}
+
+
+.navbar .login-btn {
+    border: none;
+    outline: none;
+    background: #17206D;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #17206d75;
+}
+
+/* pop up login */
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 720px;
+    background: #fff;
+    border: 2px solid #17206D;
+    transform: translate(-50%, -70%);
+}
+
+.show-popup .form-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.1s;
+}
+
+.form-popup .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #17206D;
+    cursor: pointer;
+}
+
+.blur-bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: 0.1s ease;
+}
+
+.show-popup .blur-bg-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-popup .form-box {
+    display: flex;
+}
+
+.form-box .form-details {
+    width: 100%;
+    color: #fff;
+    max-width: 330px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .form-details {
+    padding: 0 40px;
+    background: url("../images/denture fiting.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.signup .form-details {
+    padding: 0 20px;
+    background: url("../images/tooth cleaning.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box .form-content {
+    width: 100%;
+    padding: 35px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+form .input-field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-field input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    font-size: 0.95rem;
+    padding: 0 15px;
+    border: 1px solid #717171;
+    border-radius: 3px;
+}
+
+.input-field input:focus {
+    border: 1px solid #17206D;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #4a4646;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    padding: 16px 15px 0;
+}
+
+.input-field input:is(:focus, :valid)~label {
+    transform: translateY(-120%);
+    color: #17206D;
+    font-size: 0.75rem;
+}
+
+.form-box a {
+    color: #17206D;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+form :where(.forgot-pass-link, .policy-text) {
+    display: inline-flex;
+    margin-top: 13px;
+    font-size: 0.95rem;
+}
+
+form button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 14px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 25px 0;
+    background: #17206D;
+    transition: 0.2s ease;
+}
+
+form button:hover {
+    background: #17206d75;
+}
+
+.form-content .bottom-link {
+    text-align: center;
+}
+
+.form-popup .signup,
+.form-popup.show-signup .login {
+    display: none;
+}
+
+.form-popup.show-signup .signup {
+    display: flex;
+}
+
+.signup .policy-text {
+    display: flex;
+    margin-top: 14px;
+    align-items: center;
+}
+
+.signup .policy-text input {
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+}
+
+/* Main Content */
+/* button */
+.button a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background: #17206D;
+    border-radius: 25px;
+    border-color: #17206D;
+    border: 2px solid #17206D;
+    transition: border-color 0.3s;
+}
+
+.button a:hover{
+    background-color: transparent;
+    border-color: #17206D;
+    color: #17206D;
+} */
+/* home */
+.home h1 {
+    font-weight:bold;
+    text-align: center;
+    align-items: center;
+    font-size: 40;
+}
+.home {
+    font-size: 20px; 
+    text-align: center;
+    padding-top: 200px;
+    padding-right: 300px;
+    padding-left: 300px;
+    background-color: #EAF4FB;
+   
+}
+.home p {
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+}
+.container1{
+    width:100%;
+    height: fit-content;
+    display : flex;
+    align-items: center;
+    padding : 70px 10%;
+    justify-content: space-between;
+    background-color: #fff;
+}
+.potowhy {
+   box-align: left;
+}
+.why {
+    max-width: 500px;
+}
+.why h1 {
+    font-size: 40px;
+    color: black;
+
+}
+.why h2 {
+    font-size: 20px;
+    color: black;
+    text-align: left;
+}
+.why p {
+    font-size: 15px;
+    color: black;
+    width: 500px;
+}
+/* service */
+.service{
+    background: linear-gradient(to bottom,#EAF4FB,#ffffff);
+    padding: 70px;
+}
+.ourservice {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.gambar {
+flex : 0 0 auto;
+margin-right: 10px;
+}
+.gambar img {
+    width: 200px;
+    height: auto;
+}
+.caption {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.service {
+    text-align: center;
+    font-weight: 800;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+/* testi */
+.testimonial {
+    text-align: center;
+    font-weight: 800;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+/* faq */
+.faq-section{
+    display: grid;
+    grid-gap:20px ;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-column{
+    flex: 1;
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.faq-item{
+    margin-bottom: 20px;
+}
+.faq-box{
+    background-color:#BBBEFF;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+
+}
+.btn a {
+    position: relative;
+    width: 180px;
+    height: 48px;
+    display: inline-flex;
+    background:#2a9d8f;
+    border-radius: 40px;
+    font-size: 19px;
+    color: #f2e9e4;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+}
+.btn {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.formcontainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.home .btn-consult a {
+    position: relative;
+    width: 180px;
+    height: 48px;
+    display: inline-flex;
+    background:#17206D;
+    border-radius: 40px;
+    font-size: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+    font-weight: normal;
+    align-items: center;
+    justify-content: center;
+}
+.btn-consult {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/* footer */
+.container{
+    background-color: #bbbeff;
+    margin: auto;
+    width: 100%;
+    padding: 40px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row ul{
+    list-style-type: none;
+}
+
+.footer {
+    background-color:#bbbeff;
+    box-sizing: border-box;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 17px;
+    color: #000000;
+}
+.footer-col p{
+    font-size: 12px;
+    color: black;
+    text-align: center;
+}
+.footer-col img{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media (max-width: 950px) {
+    .navbar :is(.hamburger-btn, .close-btn) {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .logo img {
+        display: none;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .navbar .links {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        left: -100%;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+        background: #fff;
+        transition: 0.2s ease;
+    }
+
+    .navbar .links.show-menu {
+        left: 0;
+    }
+
+    .navbar .links a {
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        color: #000;
+    }
+
+    .navbar .links a:hover {
+        color: #17206d75;
+    }
+
+    .navbar .login-btn {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .form-popup {
+        width: 95%;
+    }
+
+    .form-box .form-details {
+        display: none;
+    }
+
+    .form-box .form-content {
+        padding: 30px 20px;
+    }
+}

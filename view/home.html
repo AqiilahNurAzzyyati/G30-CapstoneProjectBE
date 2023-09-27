@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oman Dental Care</title>
+
+    <!-- Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="icon" href="../images/logo3.png" type="images/png">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <!-- navbar & Hamburger menu -->
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="../images/logo3.png" alt="logo">
+                <h2>Oman Dental Care</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-rounded">close</span>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="../html/ourservice.html">Our Services</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+            <button class="login-btn">Register / Login</button>
+        </nav>
+    </header>
+
+    <!-- Pop up login -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome to Oman Dental Care</h2>
+                <p>Please log in using your personal information to access our full feature.</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="/login">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass-link">Forgot password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To enjoy our full feature, please sign up using your personal information.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="/register">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#" class="option">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account? 
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- home -->
+    <div class="home">
+        <h1>Your Path to a Brighter Future Begins with a Radiant Smile!</h1><br>
+        <p>Unlock your potential for a healthier, more confident you with the expertise and advanced facilities at our clinic</p>
+        <br>
+        <div class="button">
+            <a href="#">Consult Now</a>
+        </div>
+        <br>
+        <br>
+    </div>
+    
+    <!-- about shortcut -->
+        <div class="container1">
+            <div class="potowhy">
+            <img src="../images/potowhy.jpg" class ="potowhy" alt="potowhy" width="300px"></div>
+             <div class="why">
+            <h2>About Us</h1>
+            <h1>Why Oman Dental?</h1>
+            <p>At Oman Dental Clinic, we know that good oral health is essential not only for your smile but for your overall well-being. Regular check-ups are key to preventing dental issues, which can also impact conditions like heart disease, respiratory health, and even diabetes. We're here to ensure your smile and health shine.</p>
+            <br>
+            <div class="button">
+                <a href="#">More About Us</a>
+            </div>
+            <br>
+            </div>
+        </div>
+        <br>
+    
+    <!-- service shortcut -->
+    <div class="service">
+        <h1>Services</h1>
+        <br>
+        <div class="ourservice">
+            <div class="gambar">
+                <img src="../images/dental check up.jpg" alt="Dental Checkup">
+                 <div class="caption">Dental Checkup</div>
+            </div>
+            <div class="gambar">
+                <img src="../images/tooth cleaning.jpg" alt="Tooth Cleaning">
+                 <div class="caption">Tooth Cleaning</div>
+            </div>
+            <div class="gambar">
+                <img src="../images/cavity fillings.jpg" alt = "Cavity Fillings">
+                <div class="caption">Cavity Fillings</div>
+            </div>
+            <div class="gambar">
+                <img src="../images/tooth extraction.jpg" alt="Tooth Extraction">
+                <div class="caption">Tooth Extraction</div>
+            </div>
+        </div>
+        <br>
+        <div class="button">
+            <a href="#">More</a>
+        </div>
+        <br>
+    </div> 
+    <!-- testiomial shortcut -->
+        <h1 class="testimonial">Testimonial</h1>
+        <br>
+    <!-- FAQ -->
+    <div class="faq-section">
+        <h1>Frequently Asked Question</h1>
+        <div class="faq-column">
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="faq-column">
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+            <div class="faq-box">
+                <div class="faq-item">
+                    <h3>What are the services provided in here?</h3>
+                    <p>We offer services from dental checkup, teeth cleaning, cavity fillings, and more <a href="#">here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- form consult -->
+    <div class="form-container">
+        <h2>Consultation Form</h2>
+        <form action="#" method="post"></form>
+        <div class="form-group">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Your Full Name" required><br>
+            </div>
+            <div class="form-group">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required><br>
+    </div>
+    <div class="form-group">
+        <label for="phonenumber">Phone Number:</label><br>
+        <input type="tel" id="phonenumber" name="phonenumber" placeholder="Enter Your Phone Number" required><br>
+    </div>
+    <div class="form-group">
+        <label for="complaint">Complaint:</label><br>
+        <input type="text" id="complaint" name="complaint" placeholder="Enter Your Complaint" required><br>
+    </div>
+    <div class="form-group">
+        <button type="submit">Submit</button>
+        <button type="clear">Clear</button>
+    </div>
+    </form>
+    </div>
+    <br>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Operation Hours</h4>
+                    <ul>
+                        <li>Mon  09.00 - 16.00</li>
+                        <li>Tue  09.00 - 16.00</li>
+                        <li>Wed  09.00 - 16.00</li>
+                        <li>Thur 09.00 - 16.00</li>
+                        <li>Fri  09.00 - 16.00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="#">+6208123456</a></li>
+                        <li><a href="omandentalclinic@gmail.com">omandentalclinic@gmail.com</a></li>
+                        <li>Jl. Oman Sejahtera Bahagia No.1</li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Link</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Service</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#"></a>Register</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <img src="../images/logo1.png" alt="">
+                    <p>We are dedicated to consistently delivering the highest level of service to ensure our customers enjoy the best possible experience</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/login.js" defer></script>
+</body>
+</html>
